@@ -52,6 +52,10 @@ class Login extends React.Component {
           onChange={ this.handleChange }
           disable={ buttonDisable }
           onClick={ this.handleClick }
+          id="usuario"
+          texto="Entrar"
+          dataId1="login-name-input"
+          dataIdButton="login-submit-button"
         />}
       </div>
     );
