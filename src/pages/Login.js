@@ -1,10 +1,58 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
+import Carregando from '../components/Carregando';
+import Form from '../components/Form';
+import { createUser } from '../services/userAPI';
 
 class Login extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      nomeUsuario: '',
+      buttonDisable: true,
+      informacao: false,
+      clicked: false,
+    };
+  }
+
+  handleChange = ({ target }) => {
+    const { value } = target;
+    this.setState({
+      nomeUsuario: value,
+    }, () => { this.ableButton(); });
+  }
+
+  ableButton = () => {
+    const { nomeUsuario } = this.state;
+    const minLength = 3;
+
+    if (nomeUsuario.length >= minLength) {
+      return this.setState({ buttonDisable: false });
+    }
+    return this.setState({ buttonDisable: true });
+  }
+
+  handleClick = async () => {
+    const { nomeUsuario } = this.state;
+    const obj = { name: nomeUsuario };
+    this.setState({ clicked: true });
+    await createUser(obj);
+    this.setState({ informacao: true });
+  }
+
   render() {
+    const { nomeUsuario, buttonDisable, informacao, clicked } = this.state;
+
     return (
       <div data-testid="page-login">
-        <p>Login</p>
+        {informacao && <Redirect to="/search" /> }
+        { clicked ? <Carregando /> : <Form
+          value={ nomeUsuario }
+          onChange={ this.handleChange }
+          disable={ buttonDisable }
+          onClick={ this.handleClick }
+        />}
       </div>
     );
   }
