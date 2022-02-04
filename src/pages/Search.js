@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Form from '../components/Form';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
@@ -14,6 +15,7 @@ class Search extends React.Component {
       disable: true,
       clicked: false,
       showArtists: false,
+      arrayAlbuns: [],
     };
   }
 
@@ -38,25 +40,33 @@ class Search extends React.Component {
     const { nomeArtista } = this.state;
     this.setState({ clicked: true, resgataArtista: nomeArtista });
     const albuns = await searchAlbumsAPI(nomeArtista);
-    this.setState({ nomeArtista: '', clicked: false, disable: true, showArtists: true });
-    // if (albuns === []) {
-    //   return <p>Nenhum álbum foi encontrado</p>;
-    // }
-    console.log(albuns);
+    this.setState({
+      nomeArtista: '',
+      clicked: false,
+      disable: true,
+      showArtists: true,
+      arrayAlbuns: albuns });
   }
 
   render() {
-    const { nomeArtista, disable, clicked, showArtists, resgataArtista } = this.state;
+    const {
+      nomeArtista,
+      disable,
+      clicked,
+      showArtists,
+      resgataArtista,
+      arrayAlbuns } = this.state;
+
     const texto = (
       <p>
         Resultado de álbuns de:
+        {' '}
         { resgataArtista }
       </p>);
 
     return (
       <div data-testid="page-search">
         <Header />
-        {clicked && <Carregando /> }
         <Form
           value={ nomeArtista }
           onChange={ this.handleChange }
@@ -67,7 +77,29 @@ class Search extends React.Component {
           dataId1="search-artist-input"
           dataIdButton="search-artist-button"
         />
-        {showArtists && texto }
+        {clicked && <Carregando /> }
+        {showArtists && texto}
+        {showArtists && arrayAlbuns.length !== 0 && arrayAlbuns.map(
+          ({ artistName, collectionName, artworkUrl100, trackCount, collectionId }) => (
+            <section key={ collectionId }>
+              <img
+                src={ artworkUrl100 }
+                alt={ `Capa do album ${collectionName} de ${artistName}` }
+              />
+              <p>{ collectionName }</p>
+              <p>{ artistName }</p>
+              <p>{ trackCount }</p>
+              <Link
+                to={ `/album/${collectionId}` }
+                data-testid={ `link-to-album-${collectionId}` }
+              >
+                Veja o Album
+              </Link>
+            </section>),
+        )}
+
+        { showArtists && arrayAlbuns.length === 0
+        && <p>Nenhum álbum foi encontrado</p> }
       </div>
     );
   }
