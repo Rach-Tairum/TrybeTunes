@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import Carregando from '../components/Carregando';
 import Form from '../components/Form';
 import { createUser } from '../services/userAPI';
+import '../Css/Login.css';
 
 class Login extends React.Component {
   constructor() {

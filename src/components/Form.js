@@ -14,16 +14,20 @@ class Form extends React.Component {
       dataIdButton } = this.props;
     return (
       <form>
-        <label htmlFor={ id }>
-          <input
-            name="nomeUsuario"
-            value={ value }
-            type="text"
-            data-testid={ dataId1 }
-            onChange={ onChange }
-            id={ id }
-          />
-        </label>
+        <div className="inputValue">
+          <label htmlFor={ id }>
+            Digite seu nome para efetuar o login:
+
+            <input
+              name="nomeUsuario"
+              value={ value }
+              type="text"
+              data-testid={ dataId1 }
+              onChange={ onChange }
+              id={ id }
+            />
+          </label>
+        </div>
         <button
           type="button"
           data-testid={ dataIdButton }

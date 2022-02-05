@@ -1,0 +1,21 @@
+* {
+  text-align: center;
+}
+
+body {
+  background-image: url('https://c.neh.tw/image_by_url?url=https://image.freepik.com/free-vector/watercolor-background-with-pentagram-and-musical-notes_23-2147674256.jpg');
+}
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.inputValue {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inputValue input {
+  padding: 10px 50px;
+}
