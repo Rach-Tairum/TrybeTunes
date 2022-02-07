@@ -47,6 +47,7 @@ class Login extends React.Component {
 
     return (
       <div data-testid="page-login" className="loginPage">
+        <h2>Login</h2>
         {informacao && <Redirect to="/search" /> }
         { clicked ? <Carregando /> : <Form
           value={ nomeUsuario }

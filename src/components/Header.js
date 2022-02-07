@@ -13,7 +13,7 @@ class Header extends React.Component {
 
   async componentDidMount() {
     const usuario = await getUser();
-    this.setState({ greetings: `Olá ${usuario.name}` });
+    this.setState({ greetings: usuario.name });
   }
 
   render() {
@@ -26,7 +26,7 @@ class Header extends React.Component {
           <Link to="/profile" data-testid="link-to-profile"> Profile </Link>
         </nav>
         {greetings === '' ? <Carregando />
-          : <h3 data-testid="header-user-name">{ greetings }</h3>}
+          : <span><h3 data-testid="header-user-name">{ greetings }</h3></span>}
 
       </header>
     );

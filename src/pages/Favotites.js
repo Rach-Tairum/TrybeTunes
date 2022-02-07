@@ -60,6 +60,7 @@ class Favorites extends React.Component {
     return (
       <div data-testid="page-favorites">
         <Header />
+        <h2>Músicas Favoritadas</h2>
         {isLoading ? <Carregando /> : <MusicCard
           musicsAlbum={ arrayFavoritas }
           onChange={ this.removeMusica }
