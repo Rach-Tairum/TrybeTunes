@@ -46,7 +46,7 @@ class Login extends React.Component {
     const { nomeUsuario, buttonDisable, informacao, clicked } = this.state;
 
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" className="loginPage">
         {informacao && <Redirect to="/search" /> }
         { clicked ? <Carregando /> : <Form
           value={ nomeUsuario }
@@ -55,6 +55,7 @@ class Login extends React.Component {
           onClick={ this.handleClick }
           id="usuario"
           texto="Entrar"
+          textoLabel="Digite seu nome para login:"
           dataId1="login-name-input"
           dataIdButton="login-submit-button"
         />}

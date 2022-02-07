@@ -10,13 +10,14 @@ class Form extends React.Component {
       onClick,
       id,
       texto,
+      textoLabel,
       dataId1,
       dataIdButton } = this.props;
     return (
       <form>
         <div className="inputValue">
           <label htmlFor={ id }>
-            Digite seu nome para efetuar o login:
+            {textoLabel}
 
             <input
               name="nomeUsuario"
@@ -48,6 +49,7 @@ Form.propTypes = {
   onClick: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   texto: PropTypes.string.isRequired,
+  textoLabel: PropTypes.string.isRequired,
   dataId1: PropTypes.string.isRequired,
   dataIdButton: PropTypes.string.isRequired,
 };

@@ -74,6 +74,7 @@ class Search extends React.Component {
           onClick={ this.handleClick }
           id="usuario"
           texto="Pesquisar"
+          textoLabel="Digite a música que quer buscar: "
           dataId1="search-artist-input"
           dataIdButton="search-artist-button"
         />

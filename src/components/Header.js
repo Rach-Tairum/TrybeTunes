@@ -19,7 +19,7 @@ class Header extends React.Component {
   render() {
     const { greetings } = this.state;
     return (
-      <header data-testid="header-component">
+      <header data-testid="header-component" className="header-component">
         <nav>
           <Link to="/search" data-testid="link-to-search"> Search </Link>
           <Link to="/favorites" data-testid="link-to-favorites"> Favorites </Link>
