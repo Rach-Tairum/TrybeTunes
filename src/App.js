@@ -12,8 +12,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>TrybeTunes</h1>
-        <h3>Bem vindo a sua melhor forma de ouvir música!</h3>
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={ Login } />

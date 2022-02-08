@@ -20,6 +20,7 @@ class Header extends React.Component {
     const { greetings } = this.state;
     return (
       <header data-testid="header-component" className="header-component">
+        <h1>TrybeTunes</h1>
         <nav>
           <Link to="/search" data-testid="link-to-search"> Search </Link>
           <Link to="/favorites" data-testid="link-to-favorites"> Favorites </Link>

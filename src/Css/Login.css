@@ -3,19 +3,47 @@
 }
 
 body {
-  background-image: url('https://c8.alamy.com/comp/KBEGWF/music-theme-background-as-a-art-concept-KBEGWF.jpg');
+  background-image: linear-gradient(90deg, #e3170a, #61d095, #805d93);
 }
 
-form {
+.loginPage {
+  padding: 50px 30px;
+}
+
+.loginPage h1 {
+  font-family: Redressed , sans-serif;
+  font-size: 60pt;
+}
+
+.loginPage h3 {
+  color: rgb(4, 45, 133);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap') ;
+
+.login {
+  align-items: center;
   display: flex;
   flex-flow: column wrap;
+  line-height: 80px;
 }
 
-.inputValue {
-  display: flex;
-  flex-wrap: wrap;
+fieldset {
+  border-color: #032057;
+  border-radius: 20px;
+  margin-left: 340px;
+  margin-top: 15px;
+  padding-bottom: 90px;
+  width: fit-content;
 }
 
 .inputValue input {
-  padding: 10px 50px;
+  padding: 5px 50px;
+}
+
+.login button {
+  background-color: #0d3a8d;
+  border-radius: 20px;
+  color: white;
+  width: 20%;
 }

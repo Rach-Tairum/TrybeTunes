@@ -14,11 +14,11 @@ class Form extends React.Component {
       dataId1,
       dataIdButton } = this.props;
     return (
-      <form>
+      <form className="login">
         <div className="inputValue">
           <label htmlFor={ id }>
             {textoLabel}
-
+            {' '}
             <input
               name="nomeUsuario"
               value={ value }
