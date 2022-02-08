@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Form from '../components/Form';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Carregando from '../components/Carregando';
+import '../Css/Search.css';
 
 class Search extends React.Component {
   constructor() {
@@ -65,7 +66,7 @@ class Search extends React.Component {
       </p>);
 
     return (
-      <div data-testid="page-search">
+      <div data-testid="page-search" className="formEMusicas">
         {clicked && <Carregando /> }
         <Header />
         <h2>Busca</h2>
@@ -81,24 +82,27 @@ class Search extends React.Component {
           dataIdButton="search-artist-button"
         />
         {showArtists && texto}
-        {showArtists && arrayAlbuns.length !== 0 && arrayAlbuns.map(
-          ({ artistName, collectionName, artworkUrl100, trackCount, collectionId }) => (
-            <section key={ collectionId }>
-              <img
-                src={ artworkUrl100 }
-                alt={ `Capa do album ${collectionName} de ${artistName}` }
-              />
-              <p>{ collectionName }</p>
-              <p>{ artistName }</p>
-              <p>{ trackCount }</p>
-              <Link
-                to={ `/album/${collectionId}` }
-                data-testid={ `link-to-album-${collectionId}` }
-              >
-                Veja o Album
-              </Link>
-            </section>),
-        )}
+        <div className="albums">
+          {showArtists && arrayAlbuns.length !== 0 && arrayAlbuns.map(
+            ({ artistName, collectionName, artworkUrl100, trackCount, collectionId }) => (
+              <section key={ collectionId } className="detalhesAlbum">
+                <img
+                  src={ artworkUrl100 }
+                  alt={ `Capa do album ${collectionName} de ${artistName}` }
+                />
+                <p>{ collectionName }</p>
+                <p>{ artistName }</p>
+                <p>{ trackCount }</p>
+                <Link
+                  to={ `/album/${collectionId}` }
+                  data-testid={ `link-to-album-${collectionId}` }
+                  className="linkM"
+                >
+                  Veja o Album
+                </Link>
+              </section>),
+          )}
+        </div>
 
         { showArtists && arrayAlbuns.length === 0
         && <p>Nenhum álbum foi encontrado</p> }

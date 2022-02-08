@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Redressed&display=swap') ;
+
 * {
   margin-top: 0;
 }
@@ -21,6 +23,8 @@
 
 .nomeNavegação nav {
   display: flex;
+  font-family: Itim , sans-serif;
+  font-size: 14pt;
   justify-content: space-evenly;
   width: 30%;
 }
