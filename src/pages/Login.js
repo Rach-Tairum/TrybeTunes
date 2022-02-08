@@ -50,7 +50,6 @@ class Login extends React.Component {
         <div data-testid="page-login" className="loginPage">
           <h1>TrybeTunes</h1>
           <h3>Bem vindo a sua melhor forma de ouvir música!</h3>
-          <h2>Login</h2>
           {informacao && <Redirect to="/search" /> }
           { clicked ? <Carregando /> : <Form
             value={ nomeUsuario }

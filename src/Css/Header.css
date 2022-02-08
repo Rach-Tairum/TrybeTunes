@@ -1,3 +1,44 @@
-body {
-  background-image: url('https://i.pinimg.com/736x/7c/a1/e7/7ca1e7b8ef9cac1e79d1af22b4796891.jpg');
+* {
+  margin-top: 0;
+}
+
+.header-component {
+  background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p1/1750739-fundo-cinza-com-linhas-vetor.jpg');
+}
+
+.header-component h1 {
+  color: white;
+  font-family: Redressed , sans-serif;
+  font-size: 55pt;
+}
+
+.nomeNavegação {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px;
+}
+
+.nomeNavegação nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+}
+
+.link {
+  background-color: rgba(255, 255, 255, 0.753);
+  border-radius: 15px;
+  color: black;
+  margin: 15px;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nomeNavegação span {
+  font-family: Itim , sans-serif;
+  font-size: 20pt;
+  padding-bottom: 0;
+  padding-top: 40px;
+  text-align: center;
 }

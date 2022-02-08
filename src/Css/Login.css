@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: linear-gradient(90deg, #e3170a, #61d095, #805d93);
+  background-image: url('2.png');
 }
 
 .loginPage {
@@ -11,15 +11,20 @@ body {
 }
 
 .loginPage h1 {
+  color: whitesmoke;
   font-family: Redressed , sans-serif;
   font-size: 60pt;
+  margin-right: 20px;
 }
 
 .loginPage h3 {
-  color: rgb(4, 45, 133);
+  color: rgb(63, 248, 248);
+  font-family: Itim , sans-serif;
+  font-size: 20pt;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap') ;
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Redressed&display=swap') ;
 
 .login {
   align-items: center;
@@ -29,12 +34,18 @@ body {
 }
 
 fieldset {
-  border-color: #032057;
+  border-color: #68bbff;
   border-radius: 20px;
-  margin-left: 340px;
+  margin-left: 100px;
   margin-top: 15px;
   padding-bottom: 90px;
   width: fit-content;
+}
+
+.inputValue label {
+  color: white;
+  font-family: Itim , sans-serif;
+  font-size: 15pt;
 }
 
 .inputValue input {
@@ -45,5 +56,6 @@ fieldset {
   background-color: #0d3a8d;
   border-radius: 20px;
   color: white;
-  width: 20%;
+  font-size: 13pt;
+  width: 40%;
 }

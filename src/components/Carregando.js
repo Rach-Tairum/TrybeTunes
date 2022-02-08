@@ -5,7 +5,7 @@ class Carregando extends React.Component {
     return (
       <div className="loading">
         <p>Carregando...</p>
-        <img className="carrega" src="https://acegif.com/wp-content/uploads/loading-46.gif" alt="gif de carregamento" />
+        <img className="carrega" src="https://static.wixstatic.com/media/7e40c7_19f6afee5f6f416b911df607c91aed86~mv2.gif" alt="gif de carregamento" />
       </div>
     );
   }
