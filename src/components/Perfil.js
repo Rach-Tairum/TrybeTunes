@@ -20,7 +20,7 @@ class Perfil extends React.Component {
           <h3>Descrição:</h3>
           <article>{descricao}</article>
         </span>
-        <Link to="/profile/edit"> Editar perfil</Link>
+        <Link to="/profile/edit">Editar perfil</Link>
       </div>
     );
   }
