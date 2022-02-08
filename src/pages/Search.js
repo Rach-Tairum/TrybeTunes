@@ -66,6 +66,7 @@ class Search extends React.Component {
 
     return (
       <div data-testid="page-search">
+        {clicked && <Carregando /> }
         <Header />
         <h2>Busca</h2>
         <Form
@@ -79,7 +80,6 @@ class Search extends React.Component {
           dataId1="search-artist-input"
           dataIdButton="search-artist-button"
         />
-        {clicked && <Carregando /> }
         {showArtists && texto}
         {showArtists && arrayAlbuns.length !== 0 && arrayAlbuns.map(
           ({ artistName, collectionName, artworkUrl100, trackCount, collectionId }) => (

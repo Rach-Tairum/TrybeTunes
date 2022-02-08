@@ -1,0 +1,13 @@
+.loading {
+  display: flex;
+  flex-flow: column;
+}
+
+.loading p {
+  font-family: Itim , sans-serif;
+  font-size: 20pt;
+}
+
+.loading img {
+  width: 700px;
+}

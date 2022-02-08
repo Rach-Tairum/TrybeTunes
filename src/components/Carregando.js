@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Css/Carregando.css';
 
 class Carregando extends React.Component {
   render() {
