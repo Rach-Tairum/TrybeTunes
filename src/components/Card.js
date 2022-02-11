@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../Css/MusicCard.css';
 
 class Card extends React.Component {
   render() {
@@ -7,27 +8,29 @@ class Card extends React.Component {
     return (
       <div>
         {musics.map((music) => (
-          <div key={ music.trackId }>
+          <div key={ music.trackId } className="music">
             <p>{music.trackName}</p>
-            <audio data-testid="audio-component" src={ music.previewUrl } controls>
-              <track kind="captions" />
-              O seu navegador não suporta o elemento
-              {' '}
-              <code>audio</code>
-              .
-            </audio>
+            <div className="audio">
+              <audio data-testid="audio-component" src={ music.previewUrl } controls>
+                <track kind="captions" />
+                O seu navegador não suporta o elemento
+                {' '}
+                <code>audio</code>
+                .
+              </audio>
 
-            <label htmlFor={ music.trackId }>
-              <input
-                name={ music.trackName }
-                id={ music.trackId }
-                type="checkbox"
-                data-testid={ `checkbox-music-${music.trackId}` }
-                checked={ checked[music.trackName] }
-                onChange={ onChange }
-              />
-              Favorita
-            </label>
+              <label htmlFor={ music.trackId }>
+                <input
+                  name={ music.trackName }
+                  id={ music.trackId }
+                  type="checkbox"
+                  data-testid={ `checkbox-music-${music.trackId}` }
+                  checked={ checked[music.trackName] }
+                  onChange={ onChange }
+                />
+                Favorita
+              </label>
+            </div>
           </div>
         ))}
       </div>

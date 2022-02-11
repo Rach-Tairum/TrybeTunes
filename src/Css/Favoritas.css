@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo-secao {
+  color: white;
+  font-family: Redressed , sans-serif;
+  font-size: 35pt;
+  margin-right: 95px;
+}

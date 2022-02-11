@@ -4,6 +4,7 @@
 
 body {
   background-image: url('2.png');
+  width: 100%;
 }
 
 .loginPage {

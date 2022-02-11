@@ -1,0 +1,21 @@
+.nome-musicas {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
+.artist {
+  color: white;
+  margin-top: 30px;
+}
+
+.artist h2 {
+  font-family: Redressed , sans-serif;
+  font-size: 35pt;
+}
+
+.artist h4 {
+  font-family: Redressed , sans-serif;
+  font-size: 30pt;
+  text-decoration: underline;
+}

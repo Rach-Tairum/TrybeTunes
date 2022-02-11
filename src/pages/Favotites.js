@@ -3,6 +3,7 @@ import Carregando from '../components/Carregando';
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
+import '../Css/Favoritas.css';
 
 class Favorites extends React.Component {
   constructor() {
@@ -60,13 +61,15 @@ class Favorites extends React.Component {
     return (
       <div data-testid="page-favorites">
         <Header />
-        <h2>Músicas Favoritadas</h2>
-        {isLoading ? <Carregando /> : <MusicCard
-          musicsAlbum={ arrayFavoritas }
-          onChange={ this.removeMusica }
-          isLoading={ isLoading }
-          favoriteMusic={ favoriteMusic }
-        />}
+        <div className="page">
+          <h2 className="titulo-secao">Músicas Favoritadas</h2>
+          {isLoading ? <Carregando /> : <MusicCard
+            musicsAlbum={ arrayFavoritas }
+            onChange={ this.removeMusica }
+            isLoading={ isLoading }
+            favoriteMusic={ favoriteMusic }
+          />}
+        </div>
       </div>
     );
   }

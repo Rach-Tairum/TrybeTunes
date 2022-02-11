@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
 import { getFavoriteSongs, addSong, removeSong } from '../services/favoriteSongsAPI';
+import '../Css/Album.css';
 
 class Album extends React.Component {
   constructor() {
@@ -126,18 +127,20 @@ class Album extends React.Component {
     return (
       <div data-testid="page-album">
         <Header />
-        <section>
-          <h2 data-testid="artist-name">{ nameArtists }</h2>
-          <h4 data-testid="album-name">{ albumName }</h4>
-        </section>
-        <section>
-          <MusicCard
-            musicsAlbum={ musics }
-            onChange={ this.favoriteSong }
-            isLoading={ isLoading }
-            favoriteMusic={ favoriteMusic }
-          />
-        </section>
+        <div className="nome-musicas">
+          <section className="artist">
+            <h2 data-testid="artist-name">{ nameArtists }</h2>
+            <h4 data-testid="album-name">{ albumName }</h4>
+          </section>
+          <section>
+            <MusicCard
+              musicsAlbum={ musics }
+              onChange={ this.favoriteSong }
+              isLoading={ isLoading }
+              favoriteMusic={ favoriteMusic }
+            />
+          </section>
+        </div>
       </div>
     );
   }
