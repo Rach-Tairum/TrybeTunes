@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../Css/PerfilEdit.css';
 
 class PerfilPessoal extends React.Component {
   render() {
     const { nome, email, imagem, descricao, onChange, onClick, disable } = this.props;
     return (
       <div>
-        <form>
-          <label htmlFor="nome">
+        <form className="formsPerfil">
+          <label htmlFor="nome" className="title subtitle distance">
             Nome:
             <input
               id="nome"
@@ -19,7 +20,7 @@ class PerfilPessoal extends React.Component {
             />
           </label>
 
-          <label htmlFor="email">
+          <label htmlFor="email" className="title subtitle distance">
             E-mail:
             <input
               type="email"
@@ -30,7 +31,7 @@ class PerfilPessoal extends React.Component {
               onChange={ onChange }
             />
           </label>
-          <label htmlFor="descricao">
+          <label htmlFor="descricao" className="title subtitle distance">
             Descrição:
             <textarea
               data-testid="edit-input-description"
@@ -40,7 +41,7 @@ class PerfilPessoal extends React.Component {
               onChange={ onChange }
             />
           </label>
-          <label htmlFor="imagem">
+          <label htmlFor="imagem" className="title subtitle distance">
             Imagem de Perfil:
             <input
               type="text"
