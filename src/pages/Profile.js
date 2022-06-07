@@ -3,6 +3,7 @@ import Carregando from '../components/Carregando';
 import Header from '../components/Header';
 import Perfil from '../components/Perfil';
 import { getUser } from '../services/userAPI';
+import '../Css/Perfil_css.css';
 
 class Profile extends React.Component {
   state = {
@@ -31,7 +32,7 @@ class Profile extends React.Component {
     return (
       <div data-testid="page-profile">
         <Header />
-        <h2>Profile</h2>
+        <h2 className="title large">Profile</h2>
         {loading ? <Carregando /> : <Perfil
           nome={ nome }
           email={ email }

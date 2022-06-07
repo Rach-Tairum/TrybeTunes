@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Redressed&display=swap') ;
+
+.title {
+  font-family: Redressed , sans-serif;
+}
+
+.large {
+  color: white;
+  font-size: 45pt;
+}
+
+.subtitle {
+  color: rgb(2, 2, 97);
+  font-size: 30pt;
+}
+
+article {
+  color: white;
+  font-family: Itim , sans-serif;
+  font-size: 25pt;
+  margin: 40px;
+}
+
+.profilePicture {
+  border-radius: 200px;
+  width: 250px;
+}
