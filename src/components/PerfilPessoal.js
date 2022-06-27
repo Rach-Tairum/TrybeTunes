@@ -10,6 +10,7 @@ class PerfilPessoal extends React.Component {
         <form className="formsPerfil">
           <label htmlFor="nome" className="title subtitle distance">
             Nome:
+            { ' ' }
             <input
               id="nome"
               type="text"
@@ -17,11 +18,13 @@ class PerfilPessoal extends React.Component {
               value={ nome }
               name="nome"
               onChange={ onChange }
+              className="inputText"
             />
           </label>
 
           <label htmlFor="email" className="title subtitle distance">
             E-mail:
+            { ' ' }
             <input
               type="email"
               id="email"
@@ -29,20 +32,24 @@ class PerfilPessoal extends React.Component {
               value={ email }
               name="email"
               onChange={ onChange }
+              className="inputText"
             />
           </label>
-          <label htmlFor="descricao" className="title subtitle distance">
+          <label htmlFor="descricao" className="title subtitle distance ajustment">
             Descrição:
+            { ' ' }
             <textarea
               data-testid="edit-input-description"
               id="descricao"
               value={ descricao }
               name="descricao"
               onChange={ onChange }
+              className="textAreaText"
             />
           </label>
           <label htmlFor="imagem" className="title subtitle distance">
             Imagem de Perfil:
+            { ' ' }
             <input
               type="text"
               id="imagem"
@@ -50,6 +57,7 @@ class PerfilPessoal extends React.Component {
               value={ imagem }
               name="imagem"
               onChange={ onChange }
+              className="inputText2"
             />
           </label>
           <button
@@ -57,6 +65,7 @@ class PerfilPessoal extends React.Component {
             data-testid="edit-button-save"
             onClick={ onClick }
             disabled={ disable }
+            className="saveButton"
           >
             Salvar
           </button>
